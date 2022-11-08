@@ -1,0 +1,514 @@
+:root {
+    --Soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+    --Off-white: hsl(36, 100%, 99%);
+    --Grayish-blue: hsl(233, 8%, 79%);
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Very-dark-blue: hsl(240, 100%, 5%);
+
+    --ff-primary: 'Inter', sans-serif;
+    --ff-body: var(--ff-primary);
+    --ff-heading: var(--ff-primary);
+
+    --fs-700: 30px;
+    
+}
+
+
+/* https://piccalil.li/blog/a-modern-css-reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+}
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+.nav-list a:hover,
+.nav-list a:focus {
+    color: var(--Soft-orange);
+
+}
+.nav-list a {
+    text-decoration: none;
+}
+.new-contain a{
+    text-decoration: none;
+    color: var(--Off-white);
+}
+
+.new-contain p {
+    color: var(--Grayish-blue);
+    opacity: 0.8;
+}
+
+.container a:hover {
+    color: var(--Soft-orange);
+    transition: color 0.2s ease;
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--Very-dark-blue);
+}
+
+
+.footer a:hover {
+    color: var(--Soft-red);
+    transition: color 0.2s ease;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+.img-web {
+    max-width: 774px;
+    min-height: 321px;
+}
+
+
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/*navigation*/
+
+.primary-header {
+    margin-top: 45px;
+}
+
+.nav-wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content:space-between;
+}
+
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+
+
+
+
+/*utility */
+
+.container,
+.footer {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    --max-width: 1174px;
+    --padding: 2rem;
+
+    width: min(var(--max-width), 100% );/* - (var(--padding) * 2)); */
+    margin-inline: auto;
+    
+}
+
+
+
+.even-columns {
+    display: flex;
+	flex-direction: column;
+	
+}
+
+.even-column {
+    display: flex;
+    gap: 0.5rem;
+}
+
+
+/* @media (min-width: 50em) {
+    .even-columns{
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+
+    .even-column{
+        grid-auto-flow: column;
+        grid-auto-columns: auto;
+    }
+
+    .new-contain {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+
+
+    
+} */
+
+
+
+
+    
+
+/*General styling*/
+
+body {
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    color: #1B1831;
+   
+}
+
+
+
+
+
+.new-contain {
+    display: flex;
+    flex-direction: column;;
+    width: 370px;
+    min-height: 540px;
+    border: none;
+    background-color: var(--Very-dark-blue);
+    margin: auto;
+    padding: 25px;
+    margin-left: 2rem;
+    
+   
+
+}
+
+.visually-hidden {
+position: absolute;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0,0,0,0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.number {
+    font-size: 1.8rem;
+    color: var(--Grayish-blue);
+}
+
+.primary-heading {
+    font-size: 3rem;
+}
+
+.secondary-heading {
+    font-size: 2rem;
+}
+
+.desc {
+    width: 226px;
+    margin-right: 27px;
+}
+
+.third-heading {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.fourth-heading {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.fw-bold {
+    font-weight: 900;
+}
+
+.fw-semibold {
+    font-weight: 700;
+}
+.orange {
+    color: var(--Soft-orange);
+}
+
+.white {
+    color: var(--Off-white);
+}
+
+
+
+
+.divider {
+   
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 28px;
+    margin-bottom: 28px;
+    max-width: 321px;
+    height: 0.5px;
+    background-color: var(--Grayish-blue);
+}
+
+
+
+.btn {
+    width: 196px;
+    margin-top: 2rem;
+    padding: 0.7em 2.188em 0.7em 2.375rem;
+    color: var(--Off-white);
+    background-color: var(--Soft-red);
+    border: none;
+    cursor: pointer;
+
+}
+
+
+.btn:hover {
+    background-color: var(--Very-dark-blue);
+    transition: background-color 0.2s ease;
+}
+
+.img-list {
+    max-width: 106px;
+    margin-right: 1em;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    justify-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    max-width: 774px;
+    
+}
+
+.margin {
+    margin-top: 4.563rem;
+}
+
+.margin-title {
+    margin-bottom: 1rem;
+}
+
+.margin-t {
+    margin-top: 2rem;
+}
+
+.margin-b {
+    margin-bottom: 4rem;
+}
+
+.margin-tn {
+    margin-top: 0.01rem;
+}
+
+.interline {
+    line-height: 110%;
+
+}
+
+.spacing {
+    letter-spacing: 0.188rem;
+}
+
+.attribution {
+    margin-top: 3rem;
+}
+
+.nav-list {
+    display: flex;
+    gap: 2rem;
+}
+
+
+@media (max-width: 50em) {
+
+    .desk {
+        display: none;
+    }
+    .img-web {
+        background-image: url('assets/images/image-web-3-mobile.jpg');
+        background-repeat: repeat-x;
+        background-size: 100%;
+        max-width: 346px;
+        min-height: 305px;
+        
+    }
+
+    .even-columns h1 {
+        font-size: 2rem;
+    }
+  
+    .container{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        
+        
+        
+    }
+    
+
+    .even-column{
+        display: flex;
+        flex-direction: column;
+        
+        
+    }
+
+    
+
+    .new-contain {
+        margin-left: 0;
+        max-width: 346px;
+        min-height: 305px;
+        
+    }
+
+    .img-list {
+        max-width: 99px;
+    }
+
+
+    .nav-section{
+        display: none;
+        position: fixed;
+        inset:  0px 0px 0px 35%;
+        box-shadow:  -10em 0 15em rgba(0,0,1.45);
+        background-color:var(--Off-white);
+        border: none;
+        padding: 2rem;
+        padding-top: 10em;
+        z-index: 1;
+        
+        
+          
+    
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column ;
+    }
+
+ 
+
+    .nav-section[data-visible] {
+        display: block;
+        position: fixed;
+        
+    }
+
+    
+
+    .mobile-nav-toggle{
+        display: block;
+        position: fixed;
+        right: 1.1em;
+        cursor: pointer;
+        background: transparent;
+        border: 0;
+        padding: 0.5em;
+        margin-right:.5em;
+        z-index: 2;
+        width:2rem;
+        aspect-ratio: 1;
+        background-image: url('assets/images/icon-menu.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+    }
+
+
+    .mobile-nav-toggle[aria-expanded ="true"] {
+        background-image: url('assets/images/icon-menu-close.svg');
+        right: 1.1em;
+        -webkit-animation:spin 4s linear infinite;
+        -moz-animation:spin 4s linear infinite;
+        animation:spin 4s linear infinite;
+        
+    }
+    @-moz-keyframes spin { 
+        100% { -moz-transform: rotate(360deg); } 
+    }
+    @-webkit-keyframes spin { 
+        100% { -webkit-transform: rotate(360deg); } 
+    }
+    @keyframes spin { 
+        100% { 
+            -webkit-transform: rotate(360deg); 
+            transform:rotate(360deg); 
+        }  
+}
+
+@media (max-width: 60em) {
+
+    .even-column{
+       display: flex;
+       flex-wrap:wrap;
+        
+               
+    }
+
+
+
+
+
+}
+
