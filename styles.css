@@ -63,6 +63,7 @@ a:not([class]) {
 }
 .nav-list a {
     text-decoration: none;
+    color: var(--Very-dark-blue);
 }
 .new-contain a{
     text-decoration: none;
@@ -372,7 +373,10 @@ position: absolute;
 
 
 @media (max-width: 50em) {
-
+	
+    .desc { 
+        width: 346px;
+    }
     .desk {
         display: none;
     }
@@ -458,7 +462,6 @@ position: absolute;
 
     .mobile-nav-toggle{
         display: block;
-        position: fixed;
         right: 1.1em;
         cursor: pointer;
         background: transparent;
